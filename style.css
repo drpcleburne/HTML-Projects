@@ -1,0 +1,343 @@
+/* =========================================
+   DRP BUSINESS FUNDING
+   Main Website Styles
+========================================= */
+
+/* GLOBAL SETTINGS */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+  color: #142033;
+  background: #f4f1ea;
+  line-height: 1.55;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+  position: relative;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+  padding: 48px 20px 36px;
+  background: #0b1a12 url("/money.jpg") center / cover no-repeat;
+  color: #f7f4ea;
+  text-align: center;
+}
+
+.shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 18, 36, 0.55) 0%, rgba(6, 28, 18, 0.72) 100%);
+}
+
+.hero-inner { position: relative; max-width: 920px; width: 100%; }
+
+/* LOGO (transparent PNG, no circle) */
+.logo {
+  width: 168px;
+  height: 168px;
+  object-fit: contain;
+  margin: 0 auto 18px;
+  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.5));
+}
+
+/* MAIN TITLE */
+.title {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: "Oswald", "Arial Narrow", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.word { display: block; color: #f4f7f2; }
+
+.word.green {
+  font-size: clamp(64px, 12vw, 128px);
+  text-shadow: 0 2px 0 #00704a, 2px 4px 0 #123a8a, 4px 7px 0 #00704a, 6px 10px 0 #0c2f72, 8px 16px 18px rgba(0, 0, 0, 0.45);
+}
+
+.word.blue {
+  font-size: clamp(28px, 5.4vw, 58px);
+  letter-spacing: 0.16em;
+  text-shadow: 0 2px 0 #123a8a, 2px 3px 0 #00704a, 3px 6px 0 #123a8a, 5px 9px 0 #065c3c, 7px 14px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* HERO BUTTONS */
+.actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 26px; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn.solid { background: #00704a; color: #f4fff8; }
+.btn.solid:hover { background: #058556; transform: translateY(-2px); }
+
+
+/* =========================================
+   PHOTO SECTIONS
+========================================= */
+
+.showcase {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 40px 22px;
+  display: grid;
+  gap: 18px;
+}
+
+.shot {
+  position: relative;
+  margin: 0;
+  height: 360px;
+  overflow: hidden;
+  background: #0e1a2b;
+}
+
+.shot img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Title box in the corner of the photo */
+.shot figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 22px;
+  max-width: 80%;
+  padding: 12px 22px 12px 18px;
+  background: #123a8a;
+  color: #f4f7fb;
+  border-left: 5px solid #00704a;
+  font-family: "Oswald", "Arial Narrow", sans-serif;
+  font-size: clamp(20px, 3vw, 30px);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+/* First section: photo on the left, text box on the right */
+.shot.side {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  height: auto;
+  min-height: 360px;
+  background: #123a8a;
+}
+
+.shot.side img { height: 100%; min-height: 360px; }
+
+.shot.side figcaption {
+  position: static;
+  max-width: none;
+  align-self: center;
+  padding: 28px 32px;
+  font-size: clamp(22px, 3vw, 34px);
+}
+
+
+/* =========================================
+   SECTION DEFAULTS
+========================================= */
+
+.band, .split, .apply { padding: 72px 22px; }
+
+.kicker {
+  margin: 0 0 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #00704a;
+}
+
+h2 {
+  margin: 0 0 22px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: clamp(32px, 4vw, 46px);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  color: #123a8a;
+}
+
+
+/* =========================================
+   FUNDING PROGRAMS
+========================================= */
+
+.band { max-width: 1080px; margin: 0 auto; padding-top: 20px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+
+.grid article {
+  background: #fff;
+  border-top: 4px solid #00704a;
+  padding: 18px 18px 20px;
+  box-shadow: 0 1px 0 rgba(18, 58, 138, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grid article:hover { transform: translateY(-4px); box-shadow: 0 8px 22px rgba(18, 58, 138, 0.10); }
+.grid h3 { margin: 0 0 8px; font-size: 1.15rem; color: #123a8a; }
+.grid p { margin: 0; color: #3c4a5c; }
+
+
+/* =========================================
+   HOW THE FUNDING PROCESS WORKS
+========================================= */
+
+.split {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 28px;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-top: 20px;
+  background: #f4f1ea;
+}
+
+.split ol { margin: 0; padding-left: 1.1rem; display: grid; gap: 12px; }
+.split li { padding-left: 6px; }
+
+aside { background: #123a8a; color: #eef3fb; padding: 22px; align-self: start; }
+
+.aside-label {
+  margin: 0 0 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: #9ddec0;
+}
+
+aside ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 8px; }
+
+
+/* =========================================
+   APPLICATION SECTION
+========================================= */
+
+.apply {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 32px;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.card { background: #fff; padding: 22px; display: grid; gap: 12px; border-left: 4px solid #00704a; }
+
+label { display: grid; gap: 6px; font-weight: 600; font-size: 0.92rem; color: #123a8a; }
+
+input, select, textarea {
+  width: 100%;
+  font: inherit;
+  padding: 10px 12px;
+  border: 1px solid #c9d3e0;
+  border-radius: 3px;
+  background: #fbfcfe;
+  color: #142033;
+}
+
+input:focus, select:focus, textarea:focus { outline: 2px solid #00704a; outline-offset: 2px; }
+textarea { resize: vertical; }
+
+/* Submit button */
+button[type="submit"] {
+  min-height: 48px;
+  border: 0;
+  background: #123a8a;
+  color: #f4f7fb;
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover { background: #00704a; }
+button[type="submit"]:disabled { opacity: 0.6; cursor: wait; }
+
+/* Hidden spam trap (leave as is) */
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+.note { margin: 0; color: #00704a; font-weight: 700; }
+
+
+/* =========================================
+   CONTACT SECTION
+========================================= */
+
+.contact { padding: 56px 22px; text-align: center; background: #d2fcd4; color: #123a8a; }
+.contact h2 { margin-bottom: 12px; }
+.contact p { margin: 6px 0; font-family: "Times New Roman", Times, serif; font-size: medium; }
+.contact a { color: #123a8a; font-weight: 700; text-decoration: none; }
+.contact a:hover { text-decoration: underline; }
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 28px 22px 40px;
+  background: #0e1a2b;
+  color: #d5deea;
+}
+
+footer img { width: 56px; height: 56px; object-fit: contain; }
+footer strong { display: block; letter-spacing: 0.06em; }
+footer span { color: #8ea89a; font-size: 0.9rem; }
+
+
+/* =========================================
+   TABLET AND MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 800px) {
+  .split, .apply { grid-template-columns: 1fr; }
+  .logo { width: 120px; height: 120px; }
+}
+
+@media (max-width: 700px) {
+  .shot.side { grid-template-columns: 1fr; min-height: 0; }
+  .shot.side img { height: 260px; min-height: 0; }
+  .shot.side figcaption { border-left: 0; border-top: 5px solid #00704a; }
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 38px 16px 32px; }
+  .word.blue { letter-spacing: 0.08em; }
+  .actions { flex-direction: column; align-items: stretch; }
+  .btn { width: 100%; text-align: center; }
+  .showcase { padding: 28px 18px; }
+  .shot { height: 260px; }
+  .band, .split, .apply { padding: 48px 18px; }
+  .band, .split, .apply { padding-top: 16px; }
+  .contact { padding: 44px 18px; }
+  footer { padding: 24px 18px 32px; }
+}
