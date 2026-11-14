@@ -96,8 +96,8 @@ a { color: inherit; }
 .btn.solid { background: #00704a; color: #f4fff8; }
 .btn.solid:hover { background: #058556; transform: translateY(-2px); }
 .greeting {
-  background-color: #e6f4ea;  /* light green */
-  color: #1f3d2b;             /* dark green text so it's easy to read */
+  background-color: #00704A;  /* Starbucks green */
+  color: #ffffff;             /* white lettering */
   padding: 16px 24px;
   text-align: center;
   font-size: 1.1rem;
